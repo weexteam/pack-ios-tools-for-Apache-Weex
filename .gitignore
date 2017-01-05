@@ -58,3 +58,9 @@ fastlane/screenshots
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/weexpack-iOS.iml
+.idea/workspace.xml
+bin/
