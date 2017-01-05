@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "7.0"
 
   s.source =  { :path => '.' }
-  s.source_files  = "Weexplugin/Source/**/*.{h,m}"
+  s.source_files  = "Weexplugin/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
   s.resources = "Weexplugin/Resources/*"
   
