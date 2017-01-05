@@ -12,6 +12,7 @@
 
 @property (nonatomic, readonly, copy) NSString* configFile;
 
+- (id)initWithConfigName:(NSString *)configName;
 
 - (void)registerWeexPlugin;
 

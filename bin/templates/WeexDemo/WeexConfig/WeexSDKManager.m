@@ -17,7 +17,7 @@
 + (void)setupWithScanner:(BOOL)loadScanner;
 {
     NSURL *url = nil;
-    WeexPlugin *loader = [WeexPlugin new];
+    WeexPlugin *loader = [[WeexPlugin alloc] initWithConfigName:@"WeexpluginConfig.xml"];
 #if DEBUG
     //If you are debugging in device , please change the host to current IP of your computer.
     url = [loader jsBundleURL];

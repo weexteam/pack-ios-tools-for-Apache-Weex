@@ -22,10 +22,11 @@
 @implementation WeexPlugin
 
 @synthesize configParser, configFile;
-- (id)init
+- (id)initWithConfigName:(NSString *)configName
 {
     self = [super init];
     if (self != nil) {
+        self.configFile = configName;
         [self loadSettings];
     }
     return self;
