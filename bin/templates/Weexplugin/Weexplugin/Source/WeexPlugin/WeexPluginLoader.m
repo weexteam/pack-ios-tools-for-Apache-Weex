@@ -30,7 +30,7 @@
 + (void)parseSettingsWithParser:(NSObject <NSXMLParserDelegate>*)delegate
 {
     // read from config.xml in the app bundle
-    NSString* path = [self configFilePath:nil];
+    NSString* path = [self configFilePath:@"WeexpluginConfig.xml"];
     
     NSURL* url = [NSURL fileURLWithPath:path];
     
@@ -45,7 +45,7 @@
 
 +(NSString*)configFilePath:(NSString *)configPath
 {
-    NSString* path = configPath ?: @"WeexpluginConfig.xml";
+    NSString* path = configPath ?: @"config.xml";
     
     // if path is relative, resolve it against the main bundle
     if(![path isAbsolutePath]){

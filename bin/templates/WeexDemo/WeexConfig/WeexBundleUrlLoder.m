@@ -6,11 +6,11 @@
 //  Copyright © 2016年 taobao. All rights reserved.
 //
 
-#import "WeexPlugin.h"
+#import "WeexBundleUrlLoder.h"
 #import "DemoDefine.h"
 #import "WeexConfigParser.h"
 #import <WeexSDK/WeexSDK.h>
-@interface WeexPlugin ()
+@interface WeexBundleUrlLoder ()
 
 @property (nonatomic, readwrite, strong) NSXMLParser* configParser;
 @property (nonatomic, readwrite, copy) NSString* configFile;
@@ -19,33 +19,16 @@
 
 @end
 
-@implementation WeexPlugin
+@implementation WeexBundleUrlLoder
 
 @synthesize configParser, configFile;
-- (id)initWithConfigName:(NSString *)configName
+- (id)init
 {
     self = [super init];
     if (self != nil) {
-        self.configFile = configName;
         [self loadSettings];
     }
     return self;
-}
-
-- (void)registerWeexPlugin
-{
-    [self.pluginNames enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSDictionary *pluginInfo = (NSDictionary *)obj;
-        if ([pluginInfo[@"category"] isEqualToString:@"handle"] && pluginInfo[@"protocol"]) {
-            
-            [WXSDKEngine registerHandler:[NSClassFromString(pluginInfo[@"ios-package"]) new]
-                            withProtocol:NSProtocolFromString(pluginInfo[@"protocol"])];
-        }else if ([pluginInfo[@"category"] isEqualToString:@"component"] && pluginInfo[@"ios-package"]) {
-            [WXSDKEngine registerComponent:pluginInfo[@"api"] withClass:NSClassFromString(pluginInfo[@"ios-package"])];
-        }else if ([pluginInfo[@"category"] isEqualToString:@"module"] && pluginInfo[@"ios-package"]) {
-            [WXSDKEngine registerModule:pluginInfo[@"api"] withClass:NSClassFromString(pluginInfo[@"ios-package"])];
-        }
-    }];
 }
 
 - (void)parseSettingsWithParser:(NSObject <NSXMLParserDelegate>*)delegate
@@ -90,7 +73,6 @@
 {
     WeexConfigParser *delegate = [[WeexConfigParser alloc] init];
     [self parseSettingsWithParser:delegate];
-    self.pluginNames = [NSArray arrayWithArray:delegate.pluginNames];
     self.settings = [NSDictionary dictionaryWithDictionary:delegate.settings];
 }
 

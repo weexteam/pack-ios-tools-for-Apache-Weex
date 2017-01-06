@@ -8,16 +8,17 @@
 
 #import "WeexSDKManager.h"
 #import "DemoDefine.h"
-#import "WeexPlugin.h"
+#import "WeexBundleUrlLoder.h"
 #import <WeexSDK/WeexSDK.h>
 #import "WXDemoViewController.h"
+#import "WeexPluginManager.h"
 
 @implementation WeexSDKManager
 
 + (void)setupWithScanner:(BOOL)loadScanner;
 {
     NSURL *url = nil;
-    WeexPlugin *loader = [[WeexPlugin alloc] initWithConfigName:@"WeexpluginConfig.xml"];
+    WeexBundleUrlLoder *loader = [WeexBundleUrlLoder new];
 #if DEBUG
     //If you are debugging in device , please change the host to current IP of your computer.
     url = [loader jsBundleURL];
@@ -33,8 +34,7 @@
 #endif
     
     [self initWeexSDK];
-    
-    [loader registerWeexPlugin];
+    [WeexPluginManager registerWeexPlugin];
     
     if (loadScanner) {
         [self loadCustomContainWithScannerWithUrl:url];
@@ -51,7 +51,7 @@
     [WXAppConfiguration setAppVersion:@"1.8.3"];
     [WXAppConfiguration setExternalUserAgent:@"ExternalUA"];
     
-    [WXSDKEngine initSDKEnviroment];
+    [WXSDKEngine initSDKEnvironment];
     
 #ifdef DEBUG
     [WXLog setLogLevel:WXLogLevelLog];

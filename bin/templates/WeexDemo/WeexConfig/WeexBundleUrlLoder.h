@@ -8,13 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WeexPlugin : NSObject
+@interface WeexBundleUrlLoder : NSObject
 
 @property (nonatomic, readonly, copy) NSString* configFile;
 
-- (id)initWithConfigName:(NSString *)configName;
-
-- (void)registerWeexPlugin;
 
 - (NSURL *)jsBundleURL;
 
