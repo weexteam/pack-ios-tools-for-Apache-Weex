@@ -1,6 +1,6 @@
 {
   "name": "weexpack-ios",
-  "version": "4.0.11",
+  "version": "4.0.12",
   "description": "weexpack-ios release",
   "main": "bin/templates/scripts/cordova/Api.js",
   "repository": {
