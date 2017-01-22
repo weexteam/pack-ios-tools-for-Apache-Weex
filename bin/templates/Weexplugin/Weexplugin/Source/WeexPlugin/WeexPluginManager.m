@@ -20,7 +20,7 @@
     }
     [pluginNames enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary *pluginInfo = (NSDictionary *)obj;
-        if ([pluginInfo[@"category"] isEqualToString:@"handle"] && pluginInfo[@"protocol"]) {
+        if ([pluginInfo[@"category"] isEqualToString:@"handler"] && pluginInfo[@"protocol"]) {
             
             [WXSDKEngine registerHandler:[NSClassFromString(pluginInfo[@"ios-package"]) new]
                             withProtocol:NSProtocolFromString(pluginInfo[@"protocol"])];
