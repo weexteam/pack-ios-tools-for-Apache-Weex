@@ -1,41 +1,41 @@
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-
+/******/
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-
+/******/
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			exports: {},
 /******/ 			id: moduleId,
 /******/ 			loaded: false
 /******/ 		};
-
+/******/
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
+/******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-
-
+/******/
+/******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
-
+/******/
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-
+/******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
-
+/******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
 /******/ })
@@ -44,1300 +44,106 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;__weex_define__("@weex-component/e186bc461decd02d9edfd73b2750de6a", [], function(__weex_require__, __weex_exports__, __weex_module__){
-
-	;
-	  __webpack_require__(16);
-	  __weex_module__.exports = {
-	    data: function () {return {
-	      items: [
-	        // `name` key is the example filename without '.we'
-	        // Support sub directory, e.g. 'new-fashion/index'
-	        {name: 'hello', title: 'Hello World'},
-	        {name: 'style/index', title: 'Common Style'},
-	        {name: 'animation', title: 'Animation'},
-	        // component
-	        {name: 'component/text-demo', title: 'Text'},
-	        {name: 'component/image-demo', title: 'Image'},
-	        {name: 'component/scroller-demo', title: 'Scroller'},
-	        {name: 'component/list/list-basic', title: 'List (Basic)'},
-	        {name: 'component/list/list-demo', title: 'List (Advanced)'},
-	        {name: 'component/slider/index', title: 'Slider'},
-	        {name: 'component/a-demo',title:'A'},
-	        {name: 'component/video-demo', title: 'Video'},
-	        {name: 'component/countdown-demo', title: 'Countdown'},
-	        {name: 'component/marquee-demo', title: 'Marquee'},
-	        {name: 'component/web-demo', title: 'Web'},
-	        {name: 'component/navigator-demo', title: 'Navigator'},
-	        {name: 'component/tabbar/tabbar-demo', title: 'Tabbar'},
-
-	        // module
-	        {name: 'module/instance-api', title: 'Instance API'},
-	        {name: 'module/modal', title: 'Modal'},
-	        {name: 'module/stream-demo', title: 'Stream'},
-	        // showcase
-	        {name: 'showcase/new-fashion/index', title: 'Activity'},
-	        {name: 'showcase/calculator', title: 'Calculator'},
-	        {name: 'showcase/ui', title: 'UI Gallery'}
-	      ]
-	    }}
-	  }
-
-	;__weex_module__.exports.template={
-	  "type": "example-list",
-	  "attr": {
-	    "items": function () {return this.items},
-	    "dir": "examples"
-	  }
-	}
+	var __weex_template__ = __webpack_require__(1)
+	var __weex_style__ = __webpack_require__(2)
+	var __weex_script__ = __webpack_require__(3)
+	
+	__weex_define__('@weex-component/2db5b02b2b2467ace4cdd68021452568', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+	
+	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
+	    if (__weex_exports__.__esModule && __weex_exports__.default) {
+	      __weex_module__.exports = __weex_exports__.default
+	    }
+	
+	    __weex_module__.exports.template = __weex_template__
+	
+	    __weex_module__.exports.style = __weex_style__
+	
 	})
-	;__weex_bootstrap__("@weex-component/e186bc461decd02d9edfd73b2750de6a", {
-	  "transformerVersion": "0.3.1"
-	},undefined)
+	
+	__weex_bootstrap__('@weex-component/2db5b02b2b2467ace4cdd68021452568',undefined,undefined)
 
 /***/ },
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	;__weex_define__("@weex-component/index", [], function(__weex_require__, __weex_exports__, __weex_module__){
-
-	;
-	  __webpack_require__(2);
-	  __webpack_require__(3);
-	  __webpack_require__(4);
-	  __webpack_require__(5);
-	  __webpack_require__(6);
-	  __webpack_require__(7);
-	  __webpack_require__(8);
-	  __webpack_require__(9);
-	  __webpack_require__(10);
-	  __webpack_require__(11);
-	  __webpack_require__(12);
-
-	})
+	module.exports = {
+	  "type": "div",
+	  "classList": [
+	    "container"
+	  ],
+	  "children": [
+	    {
+	      "type": "image",
+	      "attr": {
+	        "src": "http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/7d42775b8f0d0c86589082dc9ee179c2.png"
+	      },
+	      "classList": [
+	        "bannar-image"
+	      ]
+	    },
+	    {
+	      "type": "text",
+	      "classList": [
+	        "message"
+	      ],
+	      "attr": {
+	        "value": function () {return this.message}
+	      }
+	    },
+	    {
+	      "type": "text",
+	      "classList": [
+	        "quotes"
+	      ],
+	      "attr": {
+	        "value": function () {return this.quotes}
+	      }
+	    }
+	  ]
+	}
 
 /***/ },
 /* 2 */
 /***/ function(module, exports) {
 
-	;__weex_define__("@weex-component/wxc-button", [], function(__weex_require__, __weex_exports__, __weex_module__){
-
-	;
-	  __weex_module__.exports = {
-	    data: function () {return {
-	      type: 'default',
-	      size: 'large',
-	      value: ''
-	    }},
-	    methods: {
-	    }
-	  }
-
-	;__weex_module__.exports.template={
-	  "type": "div",
-	  "classList": function () {return ['btn', 'btn-' + (this.type), 'btn-sz-' + (this.size)]},
-	  "children": [
-	    {
-	      "type": "text",
-	      "classList": function () {return ['btn-txt', 'btn-txt-' + (this.type), 'btn-txt-sz-' + (this.size)]},
-	      "attr": {
-	        "value": function () {return this.value}
-	      }
-	    }
-	  ]
-	}
-	;__weex_module__.exports.style={
-	  "btn": {
-	    "marginBottom": 0,
-	    "alignItems": "center",
-	    "justifyContent": "center",
-	    "borderWidth": 1,
-	    "borderStyle": "solid",
-	    "borderColor": "#333333"
+	module.exports = {
+	  "container": {
+	    "display": "flex",
+	    "flexDirection": "column",
+	    "alignItems": "center"
 	  },
-	  "btn-default": {
-	    "color": "rgb(51,51,51)"
+	  "bannar-image": {
+	    "width": 200,
+	    "height": 200
 	  },
-	  "btn-primary": {
-	    "backgroundColor": "rgb(40,96,144)",
-	    "borderColor": "rgb(40,96,144)"
+	  "message": {
+	    "paddingTop": 20,
+	    "paddingBottom": 40,
+	    "color": "#0055dd",
+	    "fontSize": 28
 	  },
-	  "btn-success": {
-	    "backgroundColor": "rgb(92,184,92)",
-	    "borderColor": "rgb(76,174,76)"
-	  },
-	  "btn-info": {
-	    "backgroundColor": "rgb(91,192,222)",
-	    "borderColor": "rgb(70,184,218)"
-	  },
-	  "btn-warning": {
-	    "backgroundColor": "rgb(240,173,78)",
-	    "borderColor": "rgb(238,162,54)"
-	  },
-	  "btn-danger": {
-	    "backgroundColor": "rgb(217,83,79)",
-	    "borderColor": "rgb(212,63,58)"
-	  },
-	  "btn-link": {
-	    "borderColor": "rgba(0,0,0,0)",
-	    "borderRadius": 0
-	  },
-	  "btn-txt-default": {
-	    "color": "rgb(51,51,51)"
-	  },
-	  "btn-txt-primary": {
-	    "color": "rgb(255,255,255)"
-	  },
-	  "btn-txt-success": {
-	    "color": "rgb(255,255,255)"
-	  },
-	  "btn-txt-info": {
-	    "color": "rgb(255,255,255)"
-	  },
-	  "btn-txt-warning": {
-	    "color": "rgb(255,255,255)"
-	  },
-	  "btn-txt-danger": {
-	    "color": "rgb(255,255,255)"
-	  },
-	  "btn-txt-link": {
-	    "color": "rgb(51,122,183)"
-	  },
-	  "btn-sz-large": {
-	    "width": 300,
-	    "height": 100,
-	    "paddingTop": 25,
-	    "paddingBottom": 25,
-	    "paddingLeft": 40,
-	    "paddingRight": 40,
-	    "borderRadius": 15
-	  },
-	  "btn-sz-middle": {
-	    "width": 240,
-	    "height": 80,
-	    "paddingTop": 15,
-	    "paddingBottom": 15,
-	    "paddingLeft": 30,
-	    "paddingRight": 30,
-	    "borderRadius": 10
-	  },
-	  "btn-sz-small": {
-	    "width": 170,
-	    "height": 60,
-	    "paddingTop": 12,
-	    "paddingBottom": 12,
-	    "paddingLeft": 25,
-	    "paddingRight": 25,
-	    "borderRadius": 7
-	  },
-	  "btn-txt-sz-large": {
-	    "fontSize": 45
-	  },
-	  "btn-txt-sz-middle": {
-	    "fontSize": 35
-	  },
-	  "btn-txt-sz-small": {
-	    "fontSize": 30
+	  "quotes": {
+	    "fontSize": 16,
+	    "color": "#666666"
 	  }
 	}
-	})
 
 /***/ },
 /* 3 */
 /***/ function(module, exports) {
 
-	;__weex_define__("@weex-component/wxc-hn", [], function(__weex_require__, __weex_exports__, __weex_module__){
+	module.exports = function(module, exports, __weex_require__){'use strict';
+	
+	module.exports = {
+	  data: function () {return {
+	    message: 'Welcome to Use Weexpack!',
+	    quotes: 'A Tool To Build WEEX Faster'
+	  }}
+	};}
+	/* generated by weex-loader */
 
-	;
-	  __weex_module__.exports = {
-	    data: function () {return {
-	      level: 1,
-	      value: ''
-	    }},
-	    methods: {}
-	  }
-
-	;__weex_module__.exports.template={
-	  "type": "div",
-	  "classList": function () {return ['h' + (this.level)]},
-	  "style": {
-	    "justifyContent": "center"
-	  },
-	  "children": [
-	    {
-	      "type": "text",
-	      "classList": function () {return ['txt-h' + (this.level)]},
-	      "attr": {
-	        "value": function () {return this.value}
-	      }
-	    }
-	  ]
-	}
-	;__weex_module__.exports.style={
-	  "h1": {
-	    "height": 110,
-	    "paddingTop": 20,
-	    "paddingBottom": 20
-	  },
-	  "h2": {
-	    "height": 110,
-	    "paddingTop": 20,
-	    "paddingBottom": 20
-	  },
-	  "h3": {
-	    "height": 110,
-	    "paddingTop": 20,
-	    "paddingBottom": 20
-	  },
-	  "txt-h1": {
-	    "fontSize": 70
-	  },
-	  "txt-h2": {
-	    "fontSize": 52
-	  },
-	  "txt-h3": {
-	    "fontSize": 42
-	  }
-	}
-	})
-
-/***/ },
-/* 4 */
-/***/ function(module, exports) {
-
-	;__weex_define__("@weex-component/wxc-list-item", [], function(__weex_require__, __weex_exports__, __weex_module__){
-
-	;
-	  __weex_module__.exports = {
-	    data: function () {return {
-	      bgColor: '#ffffff'
-	    }},
-	    methods: {
-	      touchstart: function() {
-	        // FIXME android touch
-	        // TODO adaptive opposite bgColor
-	//        this.bgColor = '#e6e6e6';
-	      },
-	      touchend: function() {
-	        // FIXME android touchend not triggered
-	//        this.bgColor = '#ffffff';
-	      }
-	    }
-	  }
-
-	;__weex_module__.exports.template={
-	  "type": "div",
-	  "classList": [
-	    "item"
-	  ],
-	  "events": {
-	    "touchstart": "touchstart",
-	    "touchend": "touchend"
-	  },
-	  "style": {
-	    "backgroundColor": function () {return this.bgColor}
-	  },
-	  "children": [
-	    {
-	      "type": "content"
-	    }
-	  ]
-	}
-	;__weex_module__.exports.style={
-	  "item": {
-	    "paddingTop": 25,
-	    "paddingBottom": 25,
-	    "paddingLeft": 35,
-	    "paddingRight": 35,
-	    "height": 160,
-	    "justifyContent": "center",
-	    "borderBottomWidth": 1,
-	    "borderColor": "#dddddd"
-	  }
-	}
-	})
-
-/***/ },
-/* 5 */
-/***/ function(module, exports) {
-
-	;__weex_define__("@weex-component/wxc-panel", [], function(__weex_require__, __weex_exports__, __weex_module__){
-
-	;
-	  __weex_module__.exports = {
-	    data: function () {return {
-	      type: 'default',
-	      title: '',
-	      paddingBody: 20,
-	      paddingHead: 20,
-	      dataClass: '', // FIXME transfer class
-	      border: 0
-	    }},
-	    ready: function() {
-	    }
-	  }
-
-	;__weex_module__.exports.template={
-	  "type": "div",
-	  "classList": function () {return ['panel', 'panel-' + (this.type)]},
-	  "style": {
-	    "borderWidth": function () {return this.border}
-	  },
-	  "children": [
-	    {
-	      "type": "text",
-	      "classList": function () {return ['panel-header', 'panel-header-' + (this.type)]},
-	      "style": {
-	        "paddingTop": function () {return this.paddingHead},
-	        "paddingBottom": function () {return this.paddingHead},
-	        "paddingLeft": function () {return this.paddingHead*1.5},
-	        "paddingRight": function () {return this.paddingHead*1.5}
-	      },
-	      "attr": {
-	        "value": function () {return this.title}
-	      }
-	    },
-	    {
-	      "type": "div",
-	      "classList": function () {return ['panel-body', 'panel-body-' + (this.type)]},
-	      "style": {
-	        "paddingTop": function () {return this.paddingBody},
-	        "paddingBottom": function () {return this.paddingBody},
-	        "paddingLeft": function () {return this.paddingBody*1.5},
-	        "paddingRight": function () {return this.paddingBody*1.5}
-	      },
-	      "children": [
-	        {
-	          "type": "content"
-	        }
-	      ]
-	    }
-	  ]
-	}
-	;__weex_module__.exports.style={
-	  "panel": {
-	    "marginBottom": 20,
-	    "backgroundColor": "#ffffff",
-	    "borderColor": "#dddddd",
-	    "borderWidth": 1
-	  },
-	  "panel-primary": {
-	    "borderColor": "rgb(40,96,144)"
-	  },
-	  "panel-success": {
-	    "borderColor": "rgb(76,174,76)"
-	  },
-	  "panel-info": {
-	    "borderColor": "rgb(70,184,218)"
-	  },
-	  "panel-warning": {
-	    "borderColor": "rgb(238,162,54)"
-	  },
-	  "panel-danger": {
-	    "borderColor": "rgb(212,63,58)"
-	  },
-	  "panel-header": {
-	    "backgroundColor": "#f5f5f5",
-	    "fontSize": 40,
-	    "color": "#333333"
-	  },
-	  "panel-header-primary": {
-	    "backgroundColor": "rgb(40,96,144)",
-	    "color": "#ffffff"
-	  },
-	  "panel-header-success": {
-	    "backgroundColor": "rgb(92,184,92)",
-	    "color": "#ffffff"
-	  },
-	  "panel-header-info": {
-	    "backgroundColor": "rgb(91,192,222)",
-	    "color": "#ffffff"
-	  },
-	  "panel-header-warning": {
-	    "backgroundColor": "rgb(240,173,78)",
-	    "color": "#ffffff"
-	  },
-	  "panel-header-danger": {
-	    "backgroundColor": "rgb(217,83,79)",
-	    "color": "#ffffff"
-	  },
-	  "panel-body": {}
-	}
-	})
-
-/***/ },
-/* 6 */
-/***/ function(module, exports) {
-
-	;__weex_define__("@weex-component/wxc-tip", [], function(__weex_require__, __weex_exports__, __weex_module__){
-
-	;
-	  __weex_module__.exports = {
-	    data: function () {return {
-	      type: 'success',
-	      value: ''
-	    }}
-	  }
-
-	;__weex_module__.exports.template={
-	  "type": "div",
-	  "classList": function () {return ['tip', 'tip-' + (this.type)]},
-	  "children": [
-	    {
-	      "type": "text",
-	      "classList": function () {return ['tip-txt', 'tip-txt-' + (this.type)]},
-	      "attr": {
-	        "value": function () {return this.value}
-	      }
-	    }
-	  ]
-	}
-	;__weex_module__.exports.style={
-	  "tip": {
-	    "paddingLeft": 36,
-	    "paddingRight": 36,
-	    "paddingTop": 36,
-	    "paddingBottom": 36,
-	    "borderRadius": 10
-	  },
-	  "tip-txt": {
-	    "fontSize": 28
-	  },
-	  "tip-success": {
-	    "backgroundColor": "#dff0d8",
-	    "borderColor": "#d6e9c6"
-	  },
-	  "tip-txt-success": {
-	    "color": "#3c763d"
-	  },
-	  "tip-info": {
-	    "backgroundColor": "#d9edf7",
-	    "borderColor": "#bce8f1"
-	  },
-	  "tip-txt-info": {
-	    "color": "#31708f"
-	  },
-	  "tip-warning": {
-	    "backgroundColor": "#fcf8e3",
-	    "borderColor": "#faebcc"
-	  },
-	  "tip-txt-warning": {
-	    "color": "#8a6d3b"
-	  },
-	  "tip-danger": {
-	    "backgroundColor": "#f2dede",
-	    "borderColor": "#ebccd1"
-	  },
-	  "tip-txt-danger": {
-	    "color": "#a94442"
-	  }
-	}
-	})
-
-/***/ },
-/* 7 */
-/***/ function(module, exports) {
-
-	;__weex_define__("@weex-component/wxc-countdown", [], function(__weex_require__, __weex_exports__, __weex_module__){
-
-	;
-	__weex_module__.exports = {
-	    data: function () {return {
-	        now: 0,
-	        remain: 0,
-	        time: {
-	            elapse: 0,
-	            D: '0',
-	            DD: '0',
-	            h: '0',
-	            hh: '00',
-	            H: '0',
-	            HH: '0',
-	            m: '0',
-	            mm: '00',
-	            M: '0',
-	            MM: '0',
-	            s: '0',
-	            ss: '00',
-	            S: '0',
-	            SS: '0'
-	        },
-	        outofview: false
-	    }},
-	    ready: function() {
-	        if (this.remain <= 0) {
-	            return;
-	        }
-	        // this.isWeb = this.$getConfig().env.platform === 'Web';
-	        this.now = Date.now();
-	        this.nextTick();
-	    },
-	    methods: {
-	        nextTick: function() {
-	            if (this.outofview) {
-	                setTimeout(this.nextTick.bind(this), 1000);
-	            } else {
-	                this.time.elapse = parseInt((Date.now() - this.now) / 1000);
-
-	                if (this.calc()) {
-	                    this.$emit('tick', Object.assign({}, this.time));
-	                    setTimeout(this.nextTick.bind(this), 1000);
-	                } else {
-	                    this.$emit('alarm', Object.assign({}, this.time));
-	                }
-	                this._app.updateActions(); 
-	            }
-	        },
-	        format: function(str) {
-	            if (str.length >= 2) {
-	                return str;
-	            } else {
-	                return '0' + str;
-	            }
-	        },
-	        calc: function() {
-	            var remain = this.remain - this.time.elapse;
-	            if (remain < 0) {
-	                remain = 0;
-	            }
-	            this.time.D = String(parseInt(remain / 86400));
-	            this.time.DD = this.format(this.time.D);
-	            this.time.h = String(parseInt((remain - parseInt(this.time.D) * 86400) / 3600));
-	            this.time.hh = this.format(this.time.h);
-	            this.time.H = String(parseInt(remain / 3600));
-	            this.time.HH = this.format(this.time.H);
-	            this.time.m = String(parseInt((remain - parseInt(this.time.H) * 3600) / 60));
-	            this.time.mm = this.format(this.time.m);
-	            this.time.M = String(parseInt(remain / 60));
-	            this.time.MM = this.format(this.time.M);
-	            this.time.s = String(remain - parseInt(this.time.M) * 60);
-	            this.time.ss = this.format(this.time.s);
-	            this.time.S = String(remain);
-	            this.time.SS = this.format(this.time.S);
-	            // console.log(remain, this.D, this.h, this.hh, this.H, this.HH, this.m, this.MM, this.s, this.ss, this.S, this.SS);
-	            return remain > 0;
-	        },
-	        appeared: function() {
-	            this.outofview = false;
-	        },
-	        disappeared: function() {
-	            this.outofview = true;
-	        }
-	    }
-	}
-
-	;__weex_module__.exports.template={
-	  "type": "div",
-	  "style": {
-	    "overflow": "hidden",
-	    "flexDirection": "row"
-	  },
-	  "events": {
-	    "appear": "appeared",
-	    "disappear": "disappeared"
-	  },
-	  "children": [
-	    {
-	      "type": "content"
-	    }
-	  ]
-	}
-	;__weex_module__.exports.style={
-	  "wrap": {
-	    "overflow": "hidden"
-	  }
-	}
-	})
-
-/***/ },
-/* 8 */
-/***/ function(module, exports) {
-
-	;__weex_define__("@weex-component/wxc-marquee", [], function(__weex_require__, __weex_exports__, __weex_module__){
-
-	;
-	__weex_module__.exports = {
-	    data: function () {return {
-	        step: 0,
-	        count: 0,
-	        index: 1,
-	        duration: 0,
-	        interval: 0,
-	        outofview: false
-	    }},
-	    ready: function () {
-	        if (this.interval > 0
-	                && this.step > 0
-	                && this.duration > 0) {
-	            this.nextTick();    
-	        }
-	    },
-	    methods: {
-	        nextTick: function() {
-	            var self = this;
-	            if (this.outofview) {
-	                setTimeout(self.nextTick.bind(self), self.interval);
-	            } else {
-	                setTimeout(function() {
-	                    self.animation(self.nextTick.bind(self));
-	                }, self.interval);
-	            }
-	        },
-	        animation: function(cb) {
-	            var self = this;
-	            var offset = -self.step * self.index;
-	            var $animation = __weex_require__('@weex-module/animation');
-	            $animation.transition(this.$el('anim'), {
-	              styles: {
-	                transform: 'translateY(' + String(offset) + 'px) translateZ(0)'
-	              },
-	              timingFunction: 'ease',
-	              duration: self.duration
-	            }, function() {
-	                self.index = (self.index + 1) % (self.count);
-	                self.$emit('change', {
-	                    index: self.index,
-	                    count: self.count
-	                });
-	                cb && cb();
-	            });
-	        },
-	        appeared: function() {
-	            this.outofview = false;
-	        },
-	        disappeared: function() {
-	            this.outofview = true;
-	        }
-	    }
-	}
-
-	;__weex_module__.exports.template={
-	  "type": "div",
-	  "classList": [
-	    "wrap"
-	  ],
-	  "events": {
-	    "appear": "appeared",
-	    "disappear": "disappeared"
-	  },
-	  "children": [
-	    {
-	      "type": "div",
-	      "id": "anim",
-	      "classList": [
-	        "anim"
-	      ],
-	      "children": [
-	        {
-	          "type": "content"
-	        }
-	      ]
-	    }
-	  ]
-	}
-	;__weex_module__.exports.style={
-	  "wrap": {
-	    "overflow": "hidden",
-	    "position": "relative"
-	  },
-	  "anim": {
-	    "flexDirection": "column",
-	    "position": "absolute",
-	    "transform": "translateY(0) translateZ(0)"
-	  }
-	}
-	})
-
-/***/ },
-/* 9 */
-/***/ function(module, exports) {
-
-	;__weex_define__("@weex-component/wxc-navbar", [], function(__weex_require__, __weex_exports__, __weex_module__){
-
-	;
-	    __weex_module__.exports = {
-	        data: function () {return {
-	          dataRole: 'navbar',
-
-	          //导航条背景色
-	          backgroundColor: 'black',
-
-	          //导航条高度
-	          height: 88,
-
-	          //导航条标题 
-	          title: "",
-
-	          //导航条标题颜色
-	          titleColor: 'black',
-
-	          //右侧按钮图片
-	          rightItemSrc: '',
-
-	          //右侧按钮标题
-	          rightItemTitle: '',
-
-	          //右侧按钮标题颜色
-	          rightItemColor: 'black',
-
-	          //左侧按钮图片
-	          leftItemSrc: '',
-
-	          //左侧按钮标题
-	          leftItemTitle: '',
-
-	          //左侧按钮颜色
-	          leftItemColor: 'black',
-	        }},
-	        methods: {
-	          onclickrightitem: function (e) {
-	            this.$dispatch('naviBar.rightItem.click', {});
-	          },
-	          onclickleftitem: function (e) {
-	            this.$dispatch('naviBar.leftItem.click', {});
-	          }
-	        }
-	    }
-
-	;__weex_module__.exports.template={
-	  "type": "div",
-	  "classList": [
-	    "container"
-	  ],
-	  "style": {
-	    "height": function () {return this.height},
-	    "backgroundColor": function () {return this.backgroundColor}
-	  },
-	  "attr": {
-	    "dataRole": function () {return this.dataRole}
-	  },
-	  "children": [
-	    {
-	      "type": "text",
-	      "classList": [
-	        "right-text"
-	      ],
-	      "style": {
-	        "color": function () {return this.rightItemColor}
-	      },
-	      "attr": {
-	        "naviItemPosition": "right",
-	        "value": function () {return this.rightItemTitle}
-	      },
-	      "shown": function () {return !this.rightItemSrc},
-	      "events": {
-	        "click": "onclickrigthitem"
-	      }
-	    },
-	    {
-	      "type": "image",
-	      "classList": [
-	        "right-image"
-	      ],
-	      "attr": {
-	        "naviItemPosition": "right",
-	        "src": function () {return this.rightItemSrc}
-	      },
-	      "shown": function () {return this.rightItemSrc},
-	      "events": {
-	        "click": "onclickrightitem"
-	      }
-	    },
-	    {
-	      "type": "text",
-	      "classList": [
-	        "left-text"
-	      ],
-	      "style": {
-	        "color": function () {return this.leftItemColor}
-	      },
-	      "attr": {
-	        "naviItemPosition": "left",
-	        "value": function () {return this.leftItemTitle}
-	      },
-	      "shown": function () {return !this.leftItemSrc},
-	      "events": {
-	        "click": "onclickleftitem"
-	      }
-	    },
-	    {
-	      "type": "image",
-	      "classList": [
-	        "left-image"
-	      ],
-	      "attr": {
-	        "naviItemPosition": "left",
-	        "src": function () {return this.leftItemSrc}
-	      },
-	      "shown": function () {return this.leftItemSrc},
-	      "events": {
-	        "click": "onclickleftitem"
-	      }
-	    },
-	    {
-	      "type": "text",
-	      "classList": [
-	        "center-text"
-	      ],
-	      "style": {
-	        "color": function () {return this.titleColor}
-	      },
-	      "attr": {
-	        "naviItemPosition": "center",
-	        "value": function () {return this.title}
-	      }
-	    }
-	  ]
-	}
-	;__weex_module__.exports.style={
-	  "container": {
-	    "flexDirection": "row",
-	    "position": "fixed",
-	    "top": 0,
-	    "left": 0,
-	    "right": 0,
-	    "width": 750
-	  },
-	  "right-text": {
-	    "position": "absolute",
-	    "bottom": 28,
-	    "right": 32,
-	    "textAlign": "right",
-	    "fontSize": 32,
-	    "fontFamily": "'Open Sans', sans-serif"
-	  },
-	  "left-text": {
-	    "position": "absolute",
-	    "bottom": 28,
-	    "left": 32,
-	    "textAlign": "left",
-	    "fontSize": 32,
-	    "fontFamily": "'Open Sans', sans-serif"
-	  },
-	  "center-text": {
-	    "position": "absolute",
-	    "bottom": 25,
-	    "left": 172,
-	    "right": 172,
-	    "textAlign": "center",
-	    "fontSize": 36,
-	    "fontWeight": "bold"
-	  },
-	  "left-image": {
-	    "position": "absolute",
-	    "bottom": 20,
-	    "left": 28,
-	    "width": 50,
-	    "height": 50
-	  },
-	  "right-image": {
-	    "position": "absolute",
-	    "bottom": 20,
-	    "right": 28,
-	    "width": 50,
-	    "height": 50
-	  }
-	}
-	})
-
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-	;__weex_define__("@weex-component/wxc-navpage", [], function(__weex_require__, __weex_exports__, __weex_module__){
-	__webpack_require__(9);
-
-	;__weex_module__.exports.template={
-	  "type": "div",
-	  "classList": [
-	    "wrapper"
-	  ],
-	  "children": [
-	    {
-	      "type": "wxc-navbar",
-	      "attr": {
-	        "dataRole": function () {return this.dataRole},
-	        "height": function () {return this.height},
-	        "backgroundColor": function () {return this.backgroundColor},
-	        "title": function () {return this.title},
-	        "titleColor": function () {return this.titleColor},
-	        "leftItemSrc": function () {return this.leftItemSrc},
-	        "leftItemTitle": function () {return this.leftItemTitle},
-	        "leftItemColor": function () {return this.leftItemColor},
-	        "rightItemSrc": function () {return this.rightItemSrc},
-	        "rightItemTitle": function () {return this.rightItemTitle},
-	        "rightItemColor": function () {return this.rightItemColor}
-	      }
-	    },
-	    {
-	      "type": "div",
-	      "classList": [
-	        "wrapper"
-	      ],
-	      "style": {
-	        "marginTop": function () {return this.height}
-	      },
-	      "children": [
-	        {
-	          "type": "content"
-	        }
-	      ]
-	    }
-	  ]
-	}
-	;__weex_module__.exports.style={
-	  "wrapper": {
-	    "position": "absolute",
-	    "top": 0,
-	    "left": 0,
-	    "right": 0,
-	    "bottom": 0,
-	    "width": 750
-	  }
-	}
-	})
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-	;__weex_define__("@weex-component/wxc-tabbar", [], function(__weex_require__, __weex_exports__, __weex_module__){
-	__webpack_require__(12);
-
-	;
-	    __weex_module__.exports = {
-	        data: function () {return {
-	          tabItems: [ ],
-	          selectedIndex: 0,
-	          selectedColor: '#ff0000',
-	          unselectedColor: '#000000',
-	        }},
-	        created: function () {
-	          this.selected(this.selectedIndex);
-
-	          this.$on('tabItem.onClick',function(e){
-	            var detail= e.detail;
-	            this.selectedIndex = detail.index;
-	            this.selected(detail.index);
-
-	            var params = {
-	              index: detail.index
-	            };
-	            this.$dispatch('tabBar.onClick', params);
-	          });
-	        },
-	        methods: {
-	            selected: function(index) {
-	              for(var i = 0; i < this.tabItems.length; i++) {
-	                var tabItem = this.tabItems[i];
-	                if(i == index){
-	                  tabItem.icon = tabItem.selectedImage;
-	                  tabItem.titleColor = this.selectedColor;
-	                  tabItem.visibility = 'visible';
-	                }
-	                else {
-	                  tabItem.icon = tabItem.image;
-	                  tabItem.titleColor = this.unselectedColor;
-	                  tabItem.visibility = 'hidden';
-	                }
-	              }
-	            },  
-	        }
-	    }
-
-	;__weex_module__.exports.template={
-	  "type": "div",
-	  "classList": [
-	    "wrapper"
-	  ],
-	  "children": [
-	    {
-	      "type": "embed",
-	      "classList": [
-	        "content"
-	      ],
-	      "style": {
-	        "visibility": function () {return this.visibility}
-	      },
-	      "repeat": function () {return this.tabItems},
-	      "attr": {
-	        "src": function () {return this.src},
-	        "type": "weex"
-	      }
-	    },
-	    {
-	      "type": "div",
-	      "classList": [
-	        "tabbar"
-	      ],
-	      "append": "tree",
-	      "children": [
-	        {
-	          "type": "wxc-tabitem",
-	          "repeat": function () {return this.tabItems},
-	          "attr": {
-	            "index": function () {return this.index},
-	            "icon": function () {return this.icon},
-	            "title": function () {return this.title},
-	            "titleColor": function () {return this.titleColor}
-	          }
-	        }
-	      ]
-	    }
-	  ]
-	}
-	;__weex_module__.exports.style={
-	  "wrapper": {
-	    "width": 750,
-	    "position": "absolute",
-	    "top": 0,
-	    "left": 0,
-	    "right": 0,
-	    "bottom": 0
-	  },
-	  "content": {
-	    "position": "absolute",
-	    "top": 0,
-	    "left": 0,
-	    "right": 0,
-	    "bottom": 0,
-	    "marginTop": 0,
-	    "marginBottom": 88
-	  },
-	  "tabbar": {
-	    "flexDirection": "row",
-	    "position": "fixed",
-	    "bottom": 0,
-	    "left": 0,
-	    "right": 0,
-	    "height": 88
-	  }
-	}
-	})
-
-/***/ },
-/* 12 */
-/***/ function(module, exports) {
-
-	;__weex_define__("@weex-component/wxc-tabitem", [], function(__weex_require__, __weex_exports__, __weex_module__){
-
-	;
-	    __weex_module__.exports = {
-	        data: function () {return {
-	          index: 0,
-	          title: '',
-	          titleColor: '#000000',
-	          icon: '',
-	          backgroundColor: '#ffffff',
-	        }},
-	        methods: {
-	          onclickitem: function (e) {
-	            var vm = this;
-	            var params = {
-	              index: vm.index
-	            };
-	            vm.$dispatch('tabItem.onClick', params);
-	          }
-	        }
-	    }
-
-	;__weex_module__.exports.template={
-	  "type": "div",
-	  "classList": [
-	    "container"
-	  ],
-	  "style": {
-	    "backgroundColor": function () {return this.backgroundColor}
-	  },
-	  "events": {
-	    "click": "onclickitem"
-	  },
-	  "children": [
-	    {
-	      "type": "image",
-	      "classList": [
-	        "top-line"
-	      ],
-	      "attr": {
-	        "src": "http://gtms03.alicdn.com/tps/i3/TB1mdsiMpXXXXXpXXXXNw4JIXXX-640-4.png"
-	      }
-	    },
-	    {
-	      "type": "image",
-	      "classList": [
-	        "tab-icon"
-	      ],
-	      "attr": {
-	        "src": function () {return this.icon}
-	      }
-	    },
-	    {
-	      "type": "text",
-	      "classList": [
-	        "tab-text"
-	      ],
-	      "style": {
-	        "color": function () {return this.titleColor}
-	      },
-	      "attr": {
-	        "value": function () {return this.title}
-	      }
-	    }
-	  ]
-	}
-	;__weex_module__.exports.style={
-	  "container": {
-	    "flex": 1,
-	    "flexDirection": "column",
-	    "alignItems": "center",
-	    "justifyContent": "center",
-	    "height": 88
-	  },
-	  "top-line": {
-	    "position": "absolute",
-	    "top": 0,
-	    "left": 0,
-	    "right": 0,
-	    "height": 2
-	  },
-	  "tab-icon": {
-	    "marginTop": 5,
-	    "width": 40,
-	    "height": 40
-	  },
-	  "tab-text": {
-	    "marginTop": 5,
-	    "textAlign": "center",
-	    "fontSize": 20
-	  }
-	}
-	})
-
-/***/ },
-/* 13 */,
-/* 14 */,
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
-
-	;__weex_define__("@weex-component/example-list-item", [], function(__weex_require__, __weex_exports__, __weex_module__){
-
-	;
-	  __webpack_require__(1);
-	  __weex_module__.exports = {
-	    data: function () {return {
-	      title: '',
-	      url: ''
-	    }},
-	    methods: {
-	      redirect: function() {
-	        this.$openURL(this.url);
-	      }
-	    }
-	  }
-
-	;__weex_module__.exports.template={
-	  "type": "wxc-list-item",
-	  "events": {
-	    "click": "redirect"
-	  },
-	  "children": [
-	    {
-	      "type": "text",
-	      "classList": [
-	        "item-txt"
-	      ],
-	      "attr": {
-	        "value": function () {return this.title}
-	      }
-	    }
-	  ]
-	}
-	;__weex_module__.exports.style={
-	  "item-txt": {
-	    "fontSize": 48,
-	    "color": "#555555"
-	  }
-	}
-	})
-
-/***/ },
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
-	;__weex_define__("@weex-component/example-list", [], function(__weex_require__, __weex_exports__, __weex_module__){
-	__webpack_require__(15);
-
-	;
-	  __webpack_require__(1);
-	  __weex_module__.exports = {
-	    data: function () {return {
-	      dir: 'examples', // examples, test ...
-	      items: [
-	        {name: 'hello', title: 'Hello World', url: ''}
-	      ]
-	    }},
-	    created: function() {
-	      var bundleUrl = this.$getConfig().bundleUrl;
-	      console.log('hit', bundleUrl);
-	      var nativeBase;
-	      var isAndroidAssets = bundleUrl.indexOf('your_current_IP') >= 0;
-	      var isiOSAssets = bundleUrl.indexOf('file:///') >= 0 && bundleUrl.indexOf('WeexDemo.app') > 0;
-	      if (isAndroidAssets) {
-	        nativeBase = 'file://assets/';
-	      }
-	      else if (isiOSAssets) {
-	        // file:///var/mobile/Containers/Bundle/Application/{id}/WeexDemo.app/
-	        // file:///Users/{user}/Library/Developer/CoreSimulator/Devices/{id}/data/Containers/Bundle/Application/{id}/WeexDemo.app/
-	        nativeBase = bundleUrl.substring(0, bundleUrl.lastIndexOf('/') + 1);
-	      }
-	      else {
-	        var host = 'localhost:12580';
-	        var matches = /\/\/([^\/]+?)\//.exec(this.$getConfig().bundleUrl);
-	        if (matches && matches.length >= 2) {
-	          host = matches[1];
-	        }
-	        nativeBase = '//' + host + '/' + this.dir + '/build/';
-	      }
-	      var h5Base = './index.html?page=./' + this.dir + '/build/';
-	      // in Native
-	      var base = nativeBase;
-	      if (typeof window === 'object') {
-	        // in Browser or WebView
-	        base = h5Base;
-	      }
-
-	      for (var i in this.items) {
-	        var item = this.items[i];
-	        if (!item.url) {
-	          item.url = base + item.name + '.js';
-	        }
-	      }
-	      // see log in Android Logcat
-	      if (this.items.length) console.log('hit', this.items[0].url);
-	    }
-	  }
-
-	;__weex_module__.exports.template={
-	  "type": "list",
-	  "children": [
-	    {
-	      "type": "cell",
-	      "append": "tree",
-	      "repeat": function () {return this.items},
-	      "children": [
-	        {
-	          "type": "example-list-item",
-	          "attr": {
-	            "title": function () {return this.title},
-	            "url": function () {return this.url}
-	          }
-	        }
-	      ]
-	    }
-	  ]
-	}
-	;__weex_module__.exports.style={}
-	})
 
 /***/ }
 /******/ ]);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vd2VicGFjay9ib290c3RyYXAgNTNlMjljNGVlNWQ5ZTBhYzliNjciLCJ3ZWJwYWNrOi8vLy4vc3JjL2luZGV4LndlP2ZjYjkiLCJ3ZWJwYWNrOi8vLy4vc3JjL2luZGV4LndlP2RkZGIiLCJ3ZWJwYWNrOi8vLy4vc3JjL2luZGV4LndlPzg2ZmMiLCJ3ZWJwYWNrOi8vLy4vc3JjL2luZGV4LndlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQSx1QkFBZTtBQUNmO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOzs7QUFHQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBOzs7Ozs7O0FDdENBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTs7QUFFQSxFQUFDOztBQUVELDJGOzs7Ozs7QUNqQkE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxRQUFPO0FBQ1A7QUFDQTtBQUNBO0FBQ0EsTUFBSztBQUNMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLCtCQUE4QjtBQUM5QjtBQUNBLE1BQUs7QUFDTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSwrQkFBOEI7QUFDOUI7QUFDQTtBQUNBO0FBQ0EsRTs7Ozs7O0FDbENBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxJQUFHO0FBQ0g7QUFDQTtBQUNBO0FBQ0EsSUFBRztBQUNIO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxJQUFHO0FBQ0g7QUFDQTtBQUNBO0FBQ0E7QUFDQSxFOzs7Ozs7OztBQ1lBOztjQUdBO2FBRUE7QUFIQTtBQURBIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiIFx0Ly8gVGhlIG1vZHVsZSBjYWNoZVxuIFx0dmFyIGluc3RhbGxlZE1vZHVsZXMgPSB7fTtcblxuIFx0Ly8gVGhlIHJlcXVpcmUgZnVuY3Rpb25cbiBcdGZ1bmN0aW9uIF9fd2VicGFja19yZXF1aXJlX18obW9kdWxlSWQpIHtcblxuIFx0XHQvLyBDaGVjayBpZiBtb2R1bGUgaXMgaW4gY2FjaGVcbiBcdFx0aWYoaW5zdGFsbGVkTW9kdWxlc1ttb2R1bGVJZF0pXG4gXHRcdFx0cmV0dXJuIGluc3RhbGxlZE1vZHVsZXNbbW9kdWxlSWRdLmV4cG9ydHM7XG5cbiBcdFx0Ly8gQ3JlYXRlIGEgbmV3IG1vZHVsZSAoYW5kIHB1dCBpdCBpbnRvIHRoZSBjYWNoZSlcbiBcdFx0dmFyIG1vZHVsZSA9IGluc3RhbGxlZE1vZHVsZXNbbW9kdWxlSWRdID0ge1xuIFx0XHRcdGV4cG9ydHM6IHt9LFxuIFx0XHRcdGlkOiBtb2R1bGVJZCxcbiBcdFx0XHRsb2FkZWQ6IGZhbHNlXG4gXHRcdH07XG5cbiBcdFx0Ly8gRXhlY3V0ZSB0aGUgbW9kdWxlIGZ1bmN0aW9uXG4gXHRcdG1vZHVsZXNbbW9kdWxlSWRdLmNhbGwobW9kdWxlLmV4cG9ydHMsIG1vZHVsZSwgbW9kdWxlLmV4cG9ydHMsIF9fd2VicGFja19yZXF1aXJlX18pO1xuXG4gXHRcdC8vIEZsYWcgdGhlIG1vZHVsZSBhcyBsb2FkZWRcbiBcdFx0bW9kdWxlLmxvYWRlZCA9IHRydWU7XG5cbiBcdFx0Ly8gUmV0dXJuIHRoZSBleHBvcnRzIG9mIHRoZSBtb2R1bGVcbiBcdFx0cmV0dXJuIG1vZHVsZS5leHBvcnRzO1xuIFx0fVxuXG5cbiBcdC8vIGV4cG9zZSB0aGUgbW9kdWxlcyBvYmplY3QgKF9fd2VicGFja19tb2R1bGVzX18pXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLm0gPSBtb2R1bGVzO1xuXG4gXHQvLyBleHBvc2UgdGhlIG1vZHVsZSBjYWNoZVxuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5jID0gaW5zdGFsbGVkTW9kdWxlcztcblxuIFx0Ly8gX193ZWJwYWNrX3B1YmxpY19wYXRoX19cbiBcdF9fd2VicGFja19yZXF1aXJlX18ucCA9IFwiXCI7XG5cbiBcdC8vIExvYWQgZW50cnkgbW9kdWxlIGFuZCByZXR1cm4gZXhwb3J0c1xuIFx0cmV0dXJuIF9fd2VicGFja19yZXF1aXJlX18oMCk7XG5cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gd2VicGFjay9ib290c3RyYXAgNTNlMjljNGVlNWQ5ZTBhYzliNjciLCJ2YXIgX193ZWV4X3RlbXBsYXRlX18gPSByZXF1aXJlKFwiISEuLy4uL25vZGVfbW9kdWxlcy93ZWV4LWxvYWRlci9saWIvanNvbi5qcyEuLy4uL25vZGVfbW9kdWxlcy93ZWV4LWxvYWRlci9saWIvdGVtcGxhdGUuanMhLi8uLi9ub2RlX21vZHVsZXMvd2VleC1sb2FkZXIvbGliL2V4dHJhY3QuanM/dHlwZT10ZW1wbGF0ZSEuL2luZGV4LndlXCIpXG52YXIgX193ZWV4X3N0eWxlX18gPSByZXF1aXJlKFwiISEuLy4uL25vZGVfbW9kdWxlcy93ZWV4LWxvYWRlci9saWIvanNvbi5qcyEuLy4uL25vZGVfbW9kdWxlcy93ZWV4LWxvYWRlci9saWIvc3R5bGUuanMhLi8uLi9ub2RlX21vZHVsZXMvd2VleC1sb2FkZXIvbGliL2V4dHJhY3QuanM/aW5kZXg9MCZ0eXBlPXN0eWxlcyEuL2luZGV4LndlXCIpXG52YXIgX193ZWV4X3NjcmlwdF9fID0gcmVxdWlyZShcIiEhLi8uLi9ub2RlX21vZHVsZXMvd2VleC1sb2FkZXIvbGliL3NjcmlwdC5qcyFiYWJlbC1sb2FkZXI/cHJlc2V0c1tdPS9Vc2Vycy95YW5nc2hlbmd0YW8vRGVza3RvcC/pmL/ph4zpobnnm64vd2VleHBhY2szOS9ub2RlX21vZHVsZXMvYmFiZWwtcHJlc2V0LWVzMjAxNSZwcmVzZXRzPS9Vc2Vycy95YW5nc2hlbmd0YW8vRGVza3RvcC/pmL/ph4zpobnnm64vd2VleHBhY2szOS9ub2RlX21vZHVsZXMvYmFiZWwtcHJlc2V0LWVzMjAxNSZwbHVnaW5zW109L1VzZXJzL3lhbmdzaGVuZ3Rhby9EZXNrdG9wL+mYv+mHjOmhueebri93ZWV4cGFjazM5L25vZGVfbW9kdWxlcy9iYWJlbC1wbHVnaW4tdHJhbnNmb3JtLXJ1bnRpbWUmcGx1Z2lucz0vVXNlcnMveWFuZ3NoZW5ndGFvL0Rlc2t0b3Av6Zi/6YeM6aG555uuL3dlZXhwYWNrMzkvbm9kZV9tb2R1bGVzL2JhYmVsLXBsdWdpbi10cmFuc2Zvcm0tcnVudGltZSZjb21tZW50cz1mYWxzZSEuLy4uL25vZGVfbW9kdWxlcy93ZWV4LWxvYWRlci9saWIvZXh0cmFjdC5qcz9pbmRleD0wJnR5cGU9c2NyaXB0cyEuL2luZGV4LndlXCIpXG5cbl9fd2VleF9kZWZpbmVfXygnQHdlZXgtY29tcG9uZW50LzJkYjViMDJiMmIyNDY3YWNlNGNkZDY4MDIxNDUyNTY4JywgW10sIGZ1bmN0aW9uKF9fd2VleF9yZXF1aXJlX18sIF9fd2VleF9leHBvcnRzX18sIF9fd2VleF9tb2R1bGVfXykge1xuXG4gICAgX193ZWV4X3NjcmlwdF9fKF9fd2VleF9tb2R1bGVfXywgX193ZWV4X2V4cG9ydHNfXywgX193ZWV4X3JlcXVpcmVfXylcbiAgICBpZiAoX193ZWV4X2V4cG9ydHNfXy5fX2VzTW9kdWxlICYmIF9fd2VleF9leHBvcnRzX18uZGVmYXVsdCkge1xuICAgICAgX193ZWV4X21vZHVsZV9fLmV4cG9ydHMgPSBfX3dlZXhfZXhwb3J0c19fLmRlZmF1bHRcbiAgICB9XG5cbiAgICBfX3dlZXhfbW9kdWxlX18uZXhwb3J0cy50ZW1wbGF0ZSA9IF9fd2VleF90ZW1wbGF0ZV9fXG5cbiAgICBfX3dlZXhfbW9kdWxlX18uZXhwb3J0cy5zdHlsZSA9IF9fd2VleF9zdHlsZV9fXG5cbn0pXG5cbl9fd2VleF9ib290c3RyYXBfXygnQHdlZXgtY29tcG9uZW50LzJkYjViMDJiMmIyNDY3YWNlNGNkZDY4MDIxNDUyNTY4Jyx1bmRlZmluZWQsdW5kZWZpbmVkKVxuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vc3JjL2luZGV4LndlP2VudHJ5PXRydWVcbi8vIG1vZHVsZSBpZCA9IDBcbi8vIG1vZHVsZSBjaHVua3MgPSAwIiwibW9kdWxlLmV4cG9ydHMgPSB7XG4gIFwidHlwZVwiOiBcImRpdlwiLFxuICBcImNsYXNzTGlzdFwiOiBbXG4gICAgXCJjb250YWluZXJcIlxuICBdLFxuICBcImNoaWxkcmVuXCI6IFtcbiAgICB7XG4gICAgICBcInR5cGVcIjogXCJpbWFnZVwiLFxuICAgICAgXCJhdHRyXCI6IHtcbiAgICAgICAgXCJzcmNcIjogXCJodHRwOi8vYXRhMi1pbWcuY24taGFuZ3pob3UuaW1nLXB1Yi5hbGl5dW4taW5jLmNvbS83ZDQyNzc1YjhmMGQwYzg2NTg5MDgyZGM5ZWUxNzljMi5wbmdcIlxuICAgICAgfSxcbiAgICAgIFwiY2xhc3NMaXN0XCI6IFtcbiAgICAgICAgXCJiYW5uYXItaW1hZ2VcIlxuICAgICAgXVxuICAgIH0sXG4gICAge1xuICAgICAgXCJ0eXBlXCI6IFwidGV4dFwiLFxuICAgICAgXCJjbGFzc0xpc3RcIjogW1xuICAgICAgICBcIm1lc3NhZ2VcIlxuICAgICAgXSxcbiAgICAgIFwiYXR0clwiOiB7XG4gICAgICAgIFwidmFsdWVcIjogZnVuY3Rpb24gKCkge3JldHVybiB0aGlzLm1lc3NhZ2V9XG4gICAgICB9XG4gICAgfSxcbiAgICB7XG4gICAgICBcInR5cGVcIjogXCJ0ZXh0XCIsXG4gICAgICBcImNsYXNzTGlzdFwiOiBbXG4gICAgICAgIFwicXVvdGVzXCJcbiAgICAgIF0sXG4gICAgICBcImF0dHJcIjoge1xuICAgICAgICBcInZhbHVlXCI6IGZ1bmN0aW9uICgpIHtyZXR1cm4gdGhpcy5xdW90ZXN9XG4gICAgICB9XG4gICAgfVxuICBdXG59XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9+L3dlZXgtbG9hZGVyL2xpYi9qc29uLmpzIS4vfi93ZWV4LWxvYWRlci9saWIvdGVtcGxhdGUuanMhLi9+L3dlZXgtbG9hZGVyL2xpYi9leHRyYWN0LmpzP3R5cGU9dGVtcGxhdGUhLi9zcmMvaW5kZXgud2Vcbi8vIG1vZHVsZSBpZCA9IDFcbi8vIG1vZHVsZSBjaHVua3MgPSAwIiwibW9kdWxlLmV4cG9ydHMgPSB7XG4gIFwiY29udGFpbmVyXCI6IHtcbiAgICBcImRpc3BsYXlcIjogXCJmbGV4XCIsXG4gICAgXCJmbGV4RGlyZWN0aW9uXCI6IFwiY29sdW1uXCIsXG4gICAgXCJhbGlnbkl0ZW1zXCI6IFwiY2VudGVyXCJcbiAgfSxcbiAgXCJiYW5uYXItaW1hZ2VcIjoge1xuICAgIFwid2lkdGhcIjogMjAwLFxuICAgIFwiaGVpZ2h0XCI6IDIwMFxuICB9LFxuICBcIm1lc3NhZ2VcIjoge1xuICAgIFwicGFkZGluZ1RvcFwiOiAyMCxcbiAgICBcInBhZGRpbmdCb3R0b21cIjogNDAsXG4gICAgXCJjb2xvclwiOiBcIiMwMDU1ZGRcIixcbiAgICBcImZvbnRTaXplXCI6IDI4XG4gIH0sXG4gIFwicXVvdGVzXCI6IHtcbiAgICBcImZvbnRTaXplXCI6IDE2LFxuICAgIFwiY29sb3JcIjogXCIjNjY2NjY2XCJcbiAgfVxufVxuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vfi93ZWV4LWxvYWRlci9saWIvanNvbi5qcyEuL34vd2VleC1sb2FkZXIvbGliL3N0eWxlLmpzIS4vfi93ZWV4LWxvYWRlci9saWIvZXh0cmFjdC5qcz9pbmRleD0wJnR5cGU9c3R5bGVzIS4vc3JjL2luZGV4LndlXG4vLyBtb2R1bGUgaWQgPSAyXG4vLyBtb2R1bGUgY2h1bmtzID0gMCIsIjx0ZW1wbGF0ZT5cbiAgPGRpdiBjbGFzcz1cImNvbnRhaW5lclwiPlxuICAgICAgPGltYWdlIHNyYz1cImh0dHA6Ly9hdGEyLWltZy5jbi1oYW5nemhvdS5pbWctcHViLmFsaXl1bi1pbmMuY29tLzdkNDI3NzViOGYwZDBjODY1ODkwODJkYzllZTE3OWMyLnBuZ1wiIGNsYXNzPVwiYmFubmFyLWltYWdlXCIvPlxuICAgICAgPHRleHQgY2xhc3M9XCJtZXNzYWdlXCI+e3sgbWVzc2FnZSB9fTwvdGV4dD5cbiAgICAgIDx0ZXh0IGNsYXNzPVwicXVvdGVzXCI+e3sgcXVvdGVzIH19PC90ZXh0PiAgICBcbiAgPC9kaXY+XG48L3RlbXBsYXRlPlxuXG48c3R5bGU+XG4gIC5jb250YWluZXJ7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIH1cblxuICAuYmFubmFyLWltYWdle1xuICAgIHdpZHRoOjIwMDtcbiAgICBoZWlnaHQ6MjAwO1xuICB9XG4gIC5tZXNzYWdle1xuICAgIHBhZGRpbmctdG9wOiAyMDtcbiAgICBwYWRkaW5nLWJvdHRvbTogNDA7XG4gICAgY29sb3I6ICMwMDU1ZGQ7XG4gICAgZm9udC1zaXplOiAyODsgXG4gIH1cbiAgLnF1b3Rlc3tcbiAgICBmb250LXNpemU6IDE2O1xuICAgIGNvbG9yOiM2NjY7IFxuICB9XG48L3N0eWxlPlxuXG48c2NyaXB0PlxuICBtb2R1bGUuZXhwb3J0cyA9IHtcbiAgICBkYXRhOiB7XG4gICAgICBtZXNzYWdlOiAnV2VsY29tZSB0byBVc2UgV2VleHBhY2shJyxcbiAgICAgIHF1b3RlczogJ0EgVG9vbCBUbyBCdWlsZCBXRUVYIEZhc3RlcicsXG4gICAgfVxuICB9XG48L3NjcmlwdD5cblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyAuL3NyYy9pbmRleC53ZT8zOGIyMDk4NSJdLCJzb3VyY2VSb290IjoiIn0=
