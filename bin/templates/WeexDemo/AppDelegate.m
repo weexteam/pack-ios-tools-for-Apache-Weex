@@ -27,7 +27,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    [WeexSDKManager setupWithScanner:YES];
+    [WeexSDKManager setup];
     
     [self.window makeKeyAndVisible];
     

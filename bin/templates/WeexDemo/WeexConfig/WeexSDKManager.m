@@ -15,7 +15,7 @@
 
 @implementation WeexSDKManager
 
-+ (void)setupWithScanner:(BOOL)loadScanner;
++ (void)setup;
 {
     NSURL *url = nil;
     WeexBundleUrlLoder *loader = [WeexBundleUrlLoder new];
@@ -35,13 +35,7 @@
     
     [self initWeexSDK];
     [WeexPluginManager registerWeexPlugin];
-    
-    if (loadScanner) {
-        [self loadCustomContainWithScannerWithUrl:url];
-    }else {
-        WXBaseViewController *demoController = [[WXBaseViewController alloc] initWithSourceURL:url];
-        [[UIApplication sharedApplication] delegate].window.rootViewController = [[WXRootViewController alloc] initWithRootViewController: demoController];
-    }
+    [self loadCustomContainWithScannerWithUrl:url];
 }
 
 + (void)initWeexSDK

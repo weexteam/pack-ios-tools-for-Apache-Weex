@@ -58,6 +58,11 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    if ([self canBecomeFirstResponder])
+    {
+        [[UIApplication sharedApplication] setApplicationSupportsShakeToEdit:YES];
+        [self becomeFirstResponder];
+    }
     [self updateInstanceState:WeexInstanceAppear];
 }
 
@@ -70,7 +75,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = NO;
+    self.navigationController.navigationBarHidden = YES;
 }
 
 //TODO get height
@@ -238,6 +243,48 @@
 #pragma mark - notification
 - (void)notificationRefreshInstance:(NSNotification *)notification {
     [self refreshWeex];
+}
+
+#pragma mark -
+#pragma mark - shark listener
+-(BOOL) canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)addNaviationBar
+{
+    self.navigationController.navigationBarHidden = NO;
+}
+
+- (void)removeNaviationBar
+{
+    self.navigationController.navigationBarHidden = YES;
+}
+
+#pragma mark -
+#pragma mark - UIResponder support motion
+
+-(void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+}
+
+-(void) motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+}
+
+-(void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    static BOOL shakeMarker = YES;
+    if (motion == UIEventSubtypeMotionShake) {
+        if (shakeMarker) {
+            [self addNaviationBar];
+            shakeMarker = NO;
+        }else {
+            [self removeNaviationBar];
+            shakeMarker = YES;
+        }
+    }
 }
 
 @end
