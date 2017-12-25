@@ -15,3 +15,5 @@ config.gypi
 CVS
 node_modules/*
 node_module/.bin/*
+bin/templates/Pods/
+bin/templates/Podfile.lock
