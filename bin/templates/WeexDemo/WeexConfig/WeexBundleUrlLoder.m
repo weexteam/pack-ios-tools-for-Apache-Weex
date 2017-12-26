@@ -8,7 +8,6 @@
 
 #import "WeexBundleUrlLoder.h"
 #import "DemoDefine.h"
-#import "WeexConfigParser.h"
 #import <WeexSDK/WeexSDK.h>
 @interface WeexBundleUrlLoder ()
 
@@ -22,14 +21,6 @@
 @implementation WeexBundleUrlLoder
 
 @synthesize configParser, configFile;
-- (id)init
-{
-    self = [super init];
-    if (self != nil) {
-        [self loadSettings];
-    }
-    return self;
-}
 
 - (void)parseSettingsWithParser:(NSObject <NSXMLParserDelegate>*)delegate
 {
@@ -68,14 +59,6 @@
     
     return path;
 }
-
-- (void)loadSettings
-{
-    WeexConfigParser *delegate = [[WeexConfigParser alloc] init];
-    [self parseSettingsWithParser:delegate];
-    self.settings = [NSDictionary dictionaryWithDictionary:delegate.settings];
-}
-
 
 - (NSURL *)jsBundleURL
 {

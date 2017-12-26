@@ -11,7 +11,6 @@
 #import <WeexSDK/WeexSDK.h>
 #import <AVFoundation/AVFoundation.h>
 #import "WeexSDKManager.h"
-#import "WXScannerVC.h"
 
 @interface AppDelegate ()
 @end
@@ -33,32 +32,7 @@
     // Override point for customization after application launch.
     [self startSplashScreen];
     
-    [self checkUpdate];
-    
     return YES;
-}
-
--(void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
-{
-    if ([shortcutItem.type isEqualToString:QRSCAN]) {
-        WXScannerVC * scanViewController = [[WXScannerVC alloc] init];
-        [(WXRootViewController*)self.window.rootViewController pushViewController:scanViewController animated:YES];
-    }
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    
-#ifdef UITEST
-#if !TARGET_IPHONE_SIMULATOR
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    setenv("GCOV_PREFIX", [documentsDirectory cStringUsingEncoding:NSUTF8StringEncoding], 1);
-    setenv("GCOV_PREFIX_STRIP", "6", 1);
-#endif
-    extern void __gcov_flush(void);
-    __gcov_flush();
-#endif
 }
 
 #pragma mark 
@@ -116,60 +90,5 @@
         }];
     }
 }
-
-#pragma mark
-
-- (void)atAddPlugin {
-    
-
-}
-
-- (void)checkUpdate {
-    __weak typeof(self) weakSelf = self;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
-        NSString *currentVersion = [infoDic objectForKey:@"CFBundleShortVersionString"];
-        NSString *URL = @"http://itunes.apple.com/lookup?id=1130862662";
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-        [request setURL:[NSURL URLWithString:URL]];
-        [request setHTTPMethod:@"POST"];
-        
-        NSHTTPURLResponse *urlResponse = nil;
-        NSError *error = nil;
-        NSData *recervedData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
-        NSString *results = [[NSString alloc] initWithBytes:[recervedData bytes] length:[recervedData length] encoding:NSUTF8StringEncoding];
-        
-        NSDictionary *dic = [WXUtility objectFromJSON:results];
-        NSArray *infoArray = [dic objectForKey:@"results"];
-        
-        if ([infoArray count]) {
-            NSDictionary *releaseInfo = [infoArray objectAtIndex:0];
-            weakSelf.latestVer = [releaseInfo objectForKey:@"version"];
-            if ([weakSelf.latestVer floatValue] > [currentVersion floatValue]) {
-                if (![[NSUserDefaults standardUserDefaults] boolForKey: weakSelf.latestVer]) {
-                    [[NSUserDefaults standardUserDefaults] setBool:FALSE forKey:weakSelf.latestVer];
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"New Version" message:@"Will update to a new version" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"update", nil];
-                        [alert show];
-                    });
-                }
-            }
-        }
-    });
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    switch (buttonIndex) {
-        case 0:
-            [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:self.latestVer];
-            break;
-        case 1:
-            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/cn/app/weex-playground/id1130862662?mt=8"]];
-        default:
-            break;
-    }
-    [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
-}
-
 
 @end

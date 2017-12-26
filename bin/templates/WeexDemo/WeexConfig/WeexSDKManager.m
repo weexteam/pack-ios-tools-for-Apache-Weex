@@ -11,7 +11,6 @@
 #import "WeexBundleUrlLoder.h"
 #import <WeexSDK/WeexSDK.h>
 #import "WXDemoViewController.h"
-#import "WeexPluginManager.h"
 #import "WXImgLoaderDefaultImpl.h"
 
 @implementation WeexSDKManager
@@ -35,7 +34,6 @@
 #endif
     
     [self initWeexSDK];
-    [WeexPluginManager registerWeexPlugin];
     [self loadCustomContainWithScannerWithUrl:url];
 }
 
