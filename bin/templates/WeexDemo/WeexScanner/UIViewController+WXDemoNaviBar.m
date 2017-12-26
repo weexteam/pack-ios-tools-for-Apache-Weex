@@ -7,7 +7,6 @@
  */
 
 #import "UIViewController+WXDemoNaviBar.h"
-#import "WXScannerVC.h"
 #import <WeexSDK/WeexSDK.h>
 #import <objc/runtime.h>
 
@@ -40,11 +39,10 @@
     UIBarButtonItem *leftItem;
     if(![[self.navigationController.viewControllers objectAtIndex:0] isEqual:self]) {
         leftItem = [self backButtonItem];
-    } else {
-        leftItem = [self leftBarButtonItem];
     }
-    
-    self.navigationItem.leftBarButtonItems = @[leftItem];
+    if (leftItem) {
+        self.navigationItem.leftBarButtonItems = @[leftItem];
+    }
 }
 
 - (void)edgePanGesture:(UIScreenEdgePanGestureRecognizer*)edgePanGestureRecognizer
@@ -61,26 +59,6 @@
     return YES;
 }
 
-#pragma mark -
-#pragma mark - UIBarButtonItems
-
-- (UIBarButtonItem *)leftBarButtonItem
-{
-    UIBarButtonItem *leftItem = objc_getAssociatedObject(self, _cmd);
-    
-    if (!leftItem) {
-        leftItem = [[UIBarButtonItem alloc]
-                    initWithImage:[UIImage imageNamed:@"scan"]
-                     style:UIBarButtonItemStylePlain
-                    target:self
-                    action:@selector(scanQR:)];
-        leftItem.accessibilityHint = @"click to scan qr code";
-        leftItem.accessibilityValue = @"scan qr code";
-        objc_setAssociatedObject(self, _cmd, leftItem, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    return leftItem;
-}
-
 - (UIBarButtonItem *)backButtonItem
 {
     UIBarButtonItem *backButtonItem = objc_getAssociatedObject(self, _cmd);
@@ -92,15 +70,6 @@
         objc_setAssociatedObject(self, _cmd, backButtonItem, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return backButtonItem;
-}
-
-#pragma mark -
-#pragma mark - UIBarButtonItem actions
-
-- (void)scanQR:(id)sender
-{
-    WXScannerVC * scanViewController = [[WXScannerVC alloc] init];
-    [self.navigationController pushViewController:scanViewController animated:YES];
 }
 
 - (void)backButtonClicked:(id)sender

@@ -11,7 +11,6 @@
 #import <WeexSDK/WeexSDK.h>
 #import <AVFoundation/AVFoundation.h>
 #import "WeexSDKManager.h"
-#import "WXScannerVC.h"
 
 @interface AppDelegate ()
 @end
@@ -34,29 +33,6 @@
     [self startSplashScreen];
     
     return YES;
-}
-
--(void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
-{
-    if ([shortcutItem.type isEqualToString:QRSCAN]) {
-        WXScannerVC * scanViewController = [[WXScannerVC alloc] init];
-        [(WXRootViewController*)self.window.rootViewController pushViewController:scanViewController animated:YES];
-    }
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    
-#ifdef UITEST
-#if !TARGET_IPHONE_SIMULATOR
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    setenv("GCOV_PREFIX", [documentsDirectory cStringUsingEncoding:NSUTF8StringEncoding], 1);
-    setenv("GCOV_PREFIX_STRIP", "6", 1);
-#endif
-    extern void __gcov_flush(void);
-    __gcov_flush();
-#endif
 }
 
 #pragma mark 

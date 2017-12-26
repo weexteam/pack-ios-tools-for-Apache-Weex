@@ -10,7 +10,6 @@
 		0A3122AF1E1F41E30041B972 /* WeexSDKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3122AC1E1F41E30041B972 /* WeexSDKManager.m */; };
 		0A4A05F91E0405070046E1BE /* UIViewController+WXDemoNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4A05F41E0405070046E1BE /* UIViewController+WXDemoNaviBar.m */; };
 		0A4A05FA1E0405070046E1BE /* WXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4A05F61E0405070046E1BE /* WXDemoViewController.m */; };
-		0A4A05FB1E0405070046E1BE /* WXScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4A05F81E0405070046E1BE /* WXScannerVC.m */; };
 		0A7758D71EA0D39C00AE9815 /* WXImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7758D61EA0D39C00AE9815 /* WXImgLoaderDefaultImpl.m */; };
 		0A86901F1E1E7872000A3F81 /* WeexDemo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A86901E1E1E7872000A3F81 /* WeexDemo-Info.plist */; };
 		0A996E0A1E249DAF0055CB7E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A996E091E249DAF0055CB7E /* libstdc++.tbd */; };
@@ -54,8 +53,6 @@
 		0A4A05F41E0405070046E1BE /* UIViewController+WXDemoNaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WXDemoNaviBar.m"; sourceTree = "<group>"; };
 		0A4A05F51E0405070046E1BE /* WXDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDemoViewController.h; sourceTree = "<group>"; };
 		0A4A05F61E0405070046E1BE /* WXDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDemoViewController.m; sourceTree = "<group>"; };
-		0A4A05F71E0405070046E1BE /* WXScannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXScannerVC.h; sourceTree = "<group>"; };
-		0A4A05F81E0405070046E1BE /* WXScannerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXScannerVC.m; sourceTree = "<group>"; };
 		0A7758D51EA0D39C00AE9815 /* WXImgLoaderDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXImgLoaderDefaultImpl.h; sourceTree = "<group>"; };
 		0A7758D61EA0D39C00AE9815 /* WXImgLoaderDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXImgLoaderDefaultImpl.m; sourceTree = "<group>"; };
 		0A86901E1E1E7872000A3F81 /* WeexDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WeexDemo-Info.plist"; sourceTree = "<group>"; };
@@ -144,8 +141,6 @@
 				0A4A05F41E0405070046E1BE /* UIViewController+WXDemoNaviBar.m */,
 				0A4A05F51E0405070046E1BE /* WXDemoViewController.h */,
 				0A4A05F61E0405070046E1BE /* WXDemoViewController.m */,
-				0A4A05F71E0405070046E1BE /* WXScannerVC.h */,
-				0A4A05F81E0405070046E1BE /* WXScannerVC.m */,
 			);
 			path = WeexScanner;
 			sourceTree = "<group>";
@@ -550,7 +545,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A4A05FB1E0405070046E1BE /* WXScannerVC.m in Sources */,
 				0A3122AF1E1F41E30041B972 /* WeexSDKManager.m in Sources */,
 				0A4A05FA1E0405070046E1BE /* WXDemoViewController.m in Sources */,
 				DCAF90601FF1326F006167B2 /* WeexBundleUrlLoder.m in Sources */,

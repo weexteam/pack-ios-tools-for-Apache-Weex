@@ -29,19 +29,6 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>scan</string>
-			<key>UIApplicationShortcutItemSubtitle</key>
-			<string>scan your QR code</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Scan QR</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>com.taobao.WeexDemo.scan</string>
-		</dict>
-	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
