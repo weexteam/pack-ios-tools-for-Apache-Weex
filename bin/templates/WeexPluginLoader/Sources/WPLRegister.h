@@ -8,12 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^ResultBlock)(NSArray *);
+@interface WPRegister : NSObject
 
-@interface WPLRegister : NSObject
-
-+(void)registerPlugins;
-
-+(void)registerPlugins:(ResultBlock)block;
++(void )registerPlugins;
 
 @end

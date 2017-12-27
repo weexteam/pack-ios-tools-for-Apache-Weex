@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>WeexPluginLoader.xcscheme_^#shared#^_</key>
+		<key>WeexPluginLoader.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C4FD293D1E8D5C970099B49B</key>
+		<key>C43B7EE31E8CE784008D305A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

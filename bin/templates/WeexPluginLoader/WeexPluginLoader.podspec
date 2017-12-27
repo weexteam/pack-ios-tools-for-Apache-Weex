@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
                      "kfeagle" =>"songhaibohust@gmail.com"
                    }
   s.platform     = :ios
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '8.0'
   s.source =  { :path => '.' }
   s.source_files = 'Sources/*.{h,m,mm,c}'
 

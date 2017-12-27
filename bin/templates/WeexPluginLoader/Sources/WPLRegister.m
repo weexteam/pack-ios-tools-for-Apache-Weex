@@ -64,44 +64,26 @@ static NSArray<Class>* readConfigurations(){
     return configs;
 }
 
-@implementation WPLRegister
+@implementation WPRegister
 
-//+(void)load
-//{
-////    NSString *bundleName = [[NSBundle mainBundle] bundleIdentifier];
-////    //淘宝的不需要使用load
-////    if([@"com.taobao.taobao4iphone" isEqualToString:bundleName]) {
-////        return;
-////    }
-//    [WPLRegister registerPlugins];
-//}
-
-
-+(void)registerPlugins
++(void)load
 {
-    [self registerPlugins:nil];
+    NSString *bundleName = [[NSBundle mainBundle] bundleIdentifier];
+    //淘宝的不需要使用load
+    if([@"com.taobao.taobao4iphone" isEqualToString:bundleName]) {
+        return;
+    }
+    [self registerPlugins];
 }
 
-+(void)registerPlugins:(ResultBlock)block
-{
-    dispatch_queue_t defaultQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_async(defaultQueue, ^{
-        NSMutableArray *plugins = [[WPLRegister registerPluginsByAnnotation] mutableCopy];
-        if (block) {
-            block(plugins);
-        }
-    });
-}
-
-+(NSArray *)registerPluginsByAnnotation
++(void )registerPlugins
 {
     NSArray *array = readConfigurations();
-    NSMutableArray *plugins = [NSMutableArray array];
     if (array && [array count]>0) {
         for (NSString *str in array) {
             NSArray<NSString*> *components = [str componentsSeparatedByString:@"&"];
             if (!components || [components count] == 0) {
-                return plugins;
+                return ;
             }
             if ([components count] < 3){
                 continue;
@@ -109,16 +91,8 @@ static NSArray<Class>* readConfigurations(){
             NSString *type = [components objectAtIndex:0];
             NSString *name = [components objectAtIndex:1];
             NSString *className = [components objectAtIndex:2];
-            NSString *version = @"0";
-            if ([components count] >= 4){
-                version = [components objectAtIndex:3];
-            }
-            
             if (type && name && className) {
                 if ([type length]>0&&[name length]>0 && [className length]>0 ) {
-                    if([self filterKeyPlugin:className]){
-                        continue;
-                    }
                     if([type isEqualToString:@"module"] && NSClassFromString(className)) {
                         WX_PlUGIN_REGISTER_MODULE(name,className);
                         NSLog(@"class %@ register name %@",className,name);
@@ -131,34 +105,10 @@ static NSArray<Class>* readConfigurations(){
                         WX_PlUGIN_REGISTER_HANDLER(name,className);
                         NSLog(@"class %@ register name %@",className,name);
                     }
-                    NSMutableDictionary *dict = [NSMutableDictionary new];
-                    [dict setObject:name forKey:@"name"];
-                    if(className) {
-                        [dict setObject:className forKey:@"className"];
-                    }
-                    if(version && version.length>0){
-                        [dict setObject:version forKey:@"version"];
-                    }
-                    [plugins addObject:dict];
                 }
             }
         }
     }
-    return plugins;
-}
-
-+(BOOL)filterKeyPlugin:(NSString *)string
-{
-    NSString *bundleName = [[NSBundle mainBundle] bundleIdentifier];
-    if([@"com.taobao.taobao4iphone" isEqualToString:bundleName]) {
-        if([@"WXImgLoaderProtocol"  isEqualToString:string]){
-            return YES;
-        }
-        if([@"WXResourceRequestHandler" isEqualToString:string]){
-            return YES;
-        }
-    }
-    return NO;
 }
 
 @end

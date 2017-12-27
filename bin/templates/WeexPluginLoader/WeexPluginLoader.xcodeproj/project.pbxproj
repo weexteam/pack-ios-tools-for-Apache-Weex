@@ -7,112 +7,118 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C4FD294E1E8D5CD40099B49B /* WeexPluginLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = C4FD294A1E8D5CD40099B49B /* WeexPluginLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4FD294F1E8D5CD40099B49B /* WPLMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = C4FD294B1E8D5CD40099B49B /* WPLMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4FD29501E8D5CD40099B49B /* WPLRegister.h in Headers */ = {isa = PBXBuildFile; fileRef = C4FD294C1E8D5CD40099B49B /* WPLRegister.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4FD29511E8D5CD40099B49B /* WPLRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD294D1E8D5CD40099B49B /* WPLRegister.m */; };
+		17AC373A2B8545FFFA824D03 /* libPods-WeexPluginLoader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C5F82A12244C526174F4E2 /* libPods-WeexPluginLoader.a */; };
+		C43B7EF21E8CE7AC008D305A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C43B7EF01E8CE7AC008D305A /* Info.plist */; };
+		C43B7EF91E8CE7C2008D305A /* WeexPluginLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = C43B7EF51E8CE7C2008D305A /* WeexPluginLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C43B7EFA1E8CE7C2008D305A /* WPLMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = C43B7EF61E8CE7C2008D305A /* WPLMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C43B7EFB1E8CE7C2008D305A /* WPLRegister.h in Headers */ = {isa = PBXBuildFile; fileRef = C43B7EF71E8CE7C2008D305A /* WPLRegister.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C43B7EFC1E8CE7C2008D305A /* WPLRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = C43B7EF81E8CE7C2008D305A /* WPLRegister.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6ABE9E60794FB6411F5FD5D4 /* Pods-WeexPluginLoader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeexPluginLoader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeexPluginLoader/Pods-WeexPluginLoader.debug.xcconfig"; sourceTree = "<group>"; };
-		C4FD293E1E8D5C970099B49B /* WeexPluginLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeexPluginLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4FD29421E8D5C970099B49B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4FD294A1E8D5CD40099B49B /* WeexPluginLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeexPluginLoader.h; sourceTree = "<group>"; };
-		C4FD294B1E8D5CD40099B49B /* WPLMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPLMacro.h; sourceTree = "<group>"; };
-		C4FD294C1E8D5CD40099B49B /* WPLRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPLRegister.h; sourceTree = "<group>"; };
-		C4FD294D1E8D5CD40099B49B /* WPLRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPLRegister.m; sourceTree = "<group>"; };
-		CA71391538FA742F72B3C773 /* Pods-WeexPluginLoader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeexPluginLoader.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeexPluginLoader/Pods-WeexPluginLoader.release.xcconfig"; sourceTree = "<group>"; };
+		15C5F82A12244C526174F4E2 /* libPods-WeexPluginLoader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeexPluginLoader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2131529CA973B2A33DFDB080 /* Pods-WeexPluginLoader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeexPluginLoader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeexPluginLoader/Pods-WeexPluginLoader.debug.xcconfig"; sourceTree = "<group>"; };
+		6AF5533958C75EDBFDE4534A /* Pods-WeexPluginLoader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeexPluginLoader.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeexPluginLoader/Pods-WeexPluginLoader.release.xcconfig"; sourceTree = "<group>"; };
+		C43B7EE41E8CE784008D305A /* WeexPluginLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeexPluginLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C43B7EF01E8CE7AC008D305A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C43B7EF51E8CE7C2008D305A /* WeexPluginLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeexPluginLoader.h; sourceTree = "<group>"; };
+		C43B7EF61E8CE7C2008D305A /* WPLMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPLMacro.h; sourceTree = "<group>"; };
+		C43B7EF71E8CE7C2008D305A /* WPLRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPLRegister.h; sourceTree = "<group>"; };
+		C43B7EF81E8CE7C2008D305A /* WPLRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPLRegister.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C4FD293A1E8D5C970099B49B /* Frameworks */ = {
+		C43B7EE01E8CE784008D305A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17AC373A2B8545FFFA824D03 /* libPods-WeexPluginLoader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52E4677BAB87ACC6AACE67A7 /* Frameworks */ = {
+		650EE909598EBFF5270FAFA2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		63BD6EC66C6C7342136E4C9E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6ABE9E60794FB6411F5FD5D4 /* Pods-WeexPluginLoader.debug.xcconfig */,
-				CA71391538FA742F72B3C773 /* Pods-WeexPluginLoader.release.xcconfig */,
+				2131529CA973B2A33DFDB080 /* Pods-WeexPluginLoader.debug.xcconfig */,
+				6AF5533958C75EDBFDE4534A /* Pods-WeexPluginLoader.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		C4FD29341E8D5C970099B49B = {
+		C43B7EDA1E8CE784008D305A = {
 			isa = PBXGroup;
 			children = (
-				C4FD29491E8D5CD40099B49B /* Sources */,
-				C4FD29401E8D5C970099B49B /* WeexPluginLoader */,
-				C4FD293F1E8D5C970099B49B /* Products */,
-				63BD6EC66C6C7342136E4C9E /* Pods */,
-				52E4677BAB87ACC6AACE67A7 /* Frameworks */,
+				C43B7EF41E8CE7C2008D305A /* Sources */,
+				C43B7EEF1E8CE7AC008D305A /* WeexPluginLoader */,
+				C43B7EE51E8CE784008D305A /* Products */,
+				650EE909598EBFF5270FAFA2 /* Pods */,
+				F39C48D702159AD1F8B1DA73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		C4FD293F1E8D5C970099B49B /* Products */ = {
+		C43B7EE51E8CE784008D305A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C4FD293E1E8D5C970099B49B /* WeexPluginLoader.framework */,
+				C43B7EE41E8CE784008D305A /* WeexPluginLoader.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C4FD29401E8D5C970099B49B /* WeexPluginLoader */ = {
+		C43B7EEF1E8CE7AC008D305A /* WeexPluginLoader */ = {
 			isa = PBXGroup;
 			children = (
-				C4FD29421E8D5C970099B49B /* Info.plist */,
+				C43B7EF01E8CE7AC008D305A /* Info.plist */,
 			);
 			path = WeexPluginLoader;
 			sourceTree = "<group>";
 		};
-		C4FD29491E8D5CD40099B49B /* Sources */ = {
+		C43B7EF41E8CE7C2008D305A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				C4FD294A1E8D5CD40099B49B /* WeexPluginLoader.h */,
-				C4FD294B1E8D5CD40099B49B /* WPLMacro.h */,
-				C4FD294C1E8D5CD40099B49B /* WPLRegister.h */,
-				C4FD294D1E8D5CD40099B49B /* WPLRegister.m */,
+				C43B7EF51E8CE7C2008D305A /* WeexPluginLoader.h */,
+				C43B7EF61E8CE7C2008D305A /* WPLMacro.h */,
+				C43B7EF71E8CE7C2008D305A /* WPLRegister.h */,
+				C43B7EF81E8CE7C2008D305A /* WPLRegister.m */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		F39C48D702159AD1F8B1DA73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15C5F82A12244C526174F4E2 /* libPods-WeexPluginLoader.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C4FD293B1E8D5C970099B49B /* Headers */ = {
+		C43B7EE11E8CE784008D305A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4FD29501E8D5CD40099B49B /* WPLRegister.h in Headers */,
-				C4FD294E1E8D5CD40099B49B /* WeexPluginLoader.h in Headers */,
-				C4FD294F1E8D5CD40099B49B /* WPLMacro.h in Headers */,
+				C43B7EF91E8CE7C2008D305A /* WeexPluginLoader.h in Headers */,
+				C43B7EFB1E8CE7C2008D305A /* WPLRegister.h in Headers */,
+				C43B7EFA1E8CE7C2008D305A /* WPLMacro.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C4FD293D1E8D5C970099B49B /* WeexPluginLoader */ = {
+		C43B7EE31E8CE784008D305A /* WeexPluginLoader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C4FD29461E8D5C980099B49B /* Build configuration list for PBXNativeTarget "WeexPluginLoader" */;
+			buildConfigurationList = C43B7EEC1E8CE784008D305A /* Build configuration list for PBXNativeTarget "WeexPluginLoader" */;
 			buildPhases = (
-				C4FD29391E8D5C970099B49B /* Sources */,
-				C4FD293A1E8D5C970099B49B /* Frameworks */,
-				C4FD293B1E8D5C970099B49B /* Headers */,
-				C4FD293C1E8D5C970099B49B /* Resources */,
+				28D45B476EEED10E34355086 /* [CP] Check Pods Manifest.lock */,
+				C43B7EDF1E8CE784008D305A /* Sources */,
+				C43B7EE01E8CE784008D305A /* Frameworks */,
+				C43B7EE11E8CE784008D305A /* Headers */,
+				C43B7EE21E8CE784008D305A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -120,64 +126,83 @@
 			);
 			name = WeexPluginLoader;
 			productName = WeexPluginLoader;
-			productReference = C4FD293E1E8D5C970099B49B /* WeexPluginLoader.framework */;
+			productReference = C43B7EE41E8CE784008D305A /* WeexPluginLoader.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C4FD29351E8D5C970099B49B /* Project object */ = {
+		C43B7EDB1E8CE784008D305A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = weexplugin;
 				TargetAttributes = {
-					C4FD293D1E8D5C970099B49B = {
+					C43B7EE31E8CE784008D305A = {
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = C4FD29381E8D5C970099B49B /* Build configuration list for PBXProject "WeexPluginLoader" */;
+			buildConfigurationList = C43B7EDE1E8CE784008D305A /* Build configuration list for PBXProject "WeexPluginLoader" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = C4FD29341E8D5C970099B49B;
-			productRefGroup = C4FD293F1E8D5C970099B49B /* Products */;
+			mainGroup = C43B7EDA1E8CE784008D305A;
+			productRefGroup = C43B7EE51E8CE784008D305A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C4FD293D1E8D5C970099B49B /* WeexPluginLoader */,
+				C43B7EE31E8CE784008D305A /* WeexPluginLoader */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C4FD293C1E8D5C970099B49B /* Resources */ = {
+		C43B7EE21E8CE784008D305A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43B7EF21E8CE7AC008D305A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28D45B476EEED10E34355086 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		C4FD29391E8D5C970099B49B /* Sources */ = {
+		C43B7EDF1E8CE784008D305A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4FD29511E8D5CD40099B49B /* WPLRegister.m in Sources */,
+				C43B7EFC1E8CE7C2008D305A /* WPLRegister.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C4FD29441E8D5C980099B49B /* Debug */ = {
+		C43B7EEA1E8CE784008D305A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -218,7 +243,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -228,7 +253,7 @@
 			};
 			name = Debug;
 		};
-		C4FD29451E8D5C980099B49B /* Release */ = {
+		C43B7EEB1E8CE784008D305A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -263,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -273,14 +298,11 @@
 			};
 			name = Release;
 		};
-		C4FD29471E8D5C980099B49B /* Debug */ = {
+		C43B7EED1E8CE784008D305A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6ABE9E60794FB6411F5FD5D4 /* Pods-WeexPluginLoader.debug.xcconfig */;
+			baseConfigurationReference = 2131529CA973B2A33DFDB080 /* Pods-WeexPluginLoader.debug.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = NO;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_IDENTITY = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -290,29 +312,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/WeexSDK\"",
-					"-Wno-error-unused-command-line-argument",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.weexplugin.WeexPluginLoader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				WARNING_CFLAGS = "-Wno-documentation";
 			};
 			name = Debug;
 		};
-		C4FD29481E8D5C980099B49B /* Release */ = {
+		C43B7EEE1E8CE784008D305A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA71391538FA742F72B3C773 /* Pods-WeexPluginLoader.release.xcconfig */;
+			baseConfigurationReference = 6AF5533958C75EDBFDE4534A /* Pods-WeexPluginLoader.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = NO;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -323,45 +332,34 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
-					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/WeexSDK\"",
-					"-Wno-error-unused-command-line-argument",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.weexplugin.WeexPluginLoader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				WARNING_CFLAGS = "-Wno-documentation";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C4FD29381E8D5C970099B49B /* Build configuration list for PBXProject "WeexPluginLoader" */ = {
+		C43B7EDE1E8CE784008D305A /* Build configuration list for PBXProject "WeexPluginLoader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C4FD29441E8D5C980099B49B /* Debug */,
-				C4FD29451E8D5C980099B49B /* Release */,
+				C43B7EEA1E8CE784008D305A /* Debug */,
+				C43B7EEB1E8CE784008D305A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C4FD29461E8D5C980099B49B /* Build configuration list for PBXNativeTarget "WeexPluginLoader" */ = {
+		C43B7EEC1E8CE784008D305A /* Build configuration list for PBXNativeTarget "WeexPluginLoader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C4FD29471E8D5C980099B49B /* Debug */,
-				C4FD29481E8D5C980099B49B /* Release */,
+				C43B7EED1E8CE784008D305A /* Debug */,
+				C43B7EEE1E8CE784008D305A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C4FD29351E8D5C970099B49B /* Project object */;
+	rootObject = C43B7EDB1E8CE784008D305A /* Project object */;
 }
