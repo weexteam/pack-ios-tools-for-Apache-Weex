@@ -30,7 +30,6 @@
 		DC5E503F1D0D97130059F0EB /* weex@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5E503D1D0D97130059F0EB /* weex@2x.png */; };
 		DC65C4FA1CEB032F00B2F84F /* bundlejs in Resources */ = {isa = PBXBuildFile; fileRef = DC65C4F91CEB032F00B2F84F /* bundlejs */; };
 		DC6DD9D21CFE9BC400549297 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7475ACA01CD8444A0044E96C /* libsqlite3.0.tbd */; };
-		DCAF90601FF1326F006167B2 /* WeexBundleUrlLoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAF905F1FF1326F006167B2 /* WeexBundleUrlLoder.m */; };
 		DCD286E01CF491AC00C601CA /* weex-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD286DF1CF491AC00C601CA /* weex-icon.png */; };
 		E1027A7B6EE11DA4A7C6998C /* libPods-WeexUITestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 835DE5CE4D0CD132AAC64A27 /* libPods-WeexUITestDemo.a */; };
 		ECD914D77E3545D298280280 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECB15C78BC5454C86CFBC04 /* AVFoundation.framework */; };
@@ -82,8 +81,6 @@
 		DC5E503C1D0D97130059F0EB /* weex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weex.png; sourceTree = "<group>"; };
 		DC5E503D1D0D97130059F0EB /* weex@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weex@2x.png"; sourceTree = "<group>"; };
 		DC65C4F91CEB032F00B2F84F /* bundlejs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundlejs; sourceTree = "<group>"; };
-		DCAF905E1FF1326F006167B2 /* WeexBundleUrlLoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeexBundleUrlLoder.h; sourceTree = "<group>"; };
-		DCAF905F1FF1326F006167B2 /* WeexBundleUrlLoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeexBundleUrlLoder.m; sourceTree = "<group>"; };
 		DCD286DF1CF491AC00C601CA /* weex-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "weex-icon.png"; path = "WeexDemo/weex-icon.png"; sourceTree = "<group>"; };
 		E838291E72D02CC3C36A86A4 /* Pods-WeexDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeexDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeexDemo/Pods-WeexDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,8 +121,6 @@
 		0A3122A61E1F41E30041B972 /* WeexConfig */ = {
 			isa = PBXGroup;
 			children = (
-				DCAF905E1FF1326F006167B2 /* WeexBundleUrlLoder.h */,
-				DCAF905F1FF1326F006167B2 /* WeexBundleUrlLoder.m */,
 				0A3122AB1E1F41E30041B972 /* WeexSDKManager.h */,
 				0A3122AC1E1F41E30041B972 /* WeexSDKManager.m */,
 				0A7758D51EA0D39C00AE9815 /* WXImgLoaderDefaultImpl.h */,
@@ -547,7 +542,6 @@
 			files = (
 				0A3122AF1E1F41E30041B972 /* WeexSDKManager.m in Sources */,
 				0A4A05FA1E0405070046E1BE /* WXDemoViewController.m in Sources */,
-				DCAF90601FF1326F006167B2 /* WeexBundleUrlLoder.m in Sources */,
 				775BEE831C1E8ECC008D1629 /* AppDelegate.m in Sources */,
 				0A4A05F91E0405070046E1BE /* UIViewController+WXDemoNaviBar.m in Sources */,
 				775BEE801C1E8ECC008D1629 /* main.m in Sources */,

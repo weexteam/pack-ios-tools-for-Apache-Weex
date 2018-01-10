@@ -8,7 +8,6 @@
 
 #import "WeexSDKManager.h"
 #import "DemoDefine.h"
-#import "WeexBundleUrlLoder.h"
 #import <WeexSDK/WeexSDK.h>
 #import "WXDemoViewController.h"
 #import "WXImgLoaderDefaultImpl.h"
@@ -20,14 +19,14 @@
     NSURL *url = nil;
 #if DEBUG
     //If you are debugging in device , please change the host to current IP of your computer.
-    WeexBundleUrlLoder *loader = [WeexBundleUrlLoder new];
-    url = [loader jsBundleURL];
-    if (!url) {
-        url = [NSURL URLWithString:BUNDLE_URL];
-    }
+    url = [NSURL URLWithString:BUNDLE_URL];
 #else
     url = [NSURL URLWithString:BUNDLE_URL];
 #endif
+    NSString * entryURL = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"WXEntryBundleURL"];
+    if (entryURL) {
+        url = [NSURL URLWithString:entryURL];
+    }
     
 #ifdef UITEST
     url = [NSURL URLWithString:UITEST_HOME_URL];
