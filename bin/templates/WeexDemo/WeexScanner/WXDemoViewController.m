@@ -49,8 +49,17 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     _weexHeight = self.view.frame.size.height - 64;
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationRefreshInstance:) name:@"RefreshInstance" object:nil];
+    
+#if DEBUG
+    NSString * hotReloadURL =  [[NSBundle mainBundle] objectForInfoDictionaryKey:@"WXSocketConnectionURL"];
+    if (hotReloadURL){
+        _hotReloadSocket = [[SRWebSocket alloc] initWithURL:[NSURL URLWithString:hotReloadURL]];
+        _hotReloadSocket.delegate = self;
+        [_hotReloadSocket open];
+    }
+
+#endif
     
     [self render];
 }
@@ -191,13 +200,26 @@
 #pragma mark - websocket
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket
 {
-    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message
 {
     if ([@"refresh" isEqualToString:message]) {
         [self render];
+    }
+    @try {
+        NSDictionary * messageDic = [WXUtility objectFromJSON:message];
+        NSString *method = messageDic[@"method"];
+        if ([method hasPrefix:@"WXReload"]) {
+            if ([method isEqualToString:@"WXReloadBundle"] && messageDic[@"params"]) {
+                self.url = [NSURL URLWithString:messageDic[@"params"]];
+            }
+            [self render];
+        }
+       
+    }@catch(NSError * error) {
+        NSLog(@"error");
     }
 }
 
