@@ -110,8 +110,12 @@
 
 - (void)dealloc
 {
+    if (_hotReloadSocket) {
+        [_hotReloadSocket close];
+    }
     [_instance destroyInstance];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    _hotReloadSocket = nil;
 }
 
 - (void)render
@@ -200,7 +204,6 @@
 #pragma mark - websocket
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket
 {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message
