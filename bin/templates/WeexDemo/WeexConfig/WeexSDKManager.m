@@ -25,7 +25,11 @@
 #endif
     NSString * entryURL = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"WXEntryBundleURL"];
     if (entryURL) {
-        url = [NSURL URLWithString:entryURL];
+        if ([entryURL hasPrefix:@"http"]) {
+            url = [NSURL URLWithString:entryURL];
+        } else {
+            url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",[[NSBundle bundleForClass:self] resourceURL].absoluteString, entryURL]];
+        }
     }
     
 #ifdef UITEST
